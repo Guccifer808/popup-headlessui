@@ -20,13 +20,14 @@
   
 }
 .popup {
+  display: flex row;
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
-  padding: 8rem;
+  padding: 3rem;
   background:rgba(109, 109, 109, 0.5);
   position: relative;
-  margin: 4rem;
+  margin: 2rem;
 }
 
 

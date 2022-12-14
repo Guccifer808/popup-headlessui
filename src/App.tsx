@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react';
-import { SlClose } from 'react-icons/sl'
+import { Fragment, useState } from 'react'
+import { Dialog, Transition } from '@headlessui/react';
 import './App.css'
 
-function App() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+ export default function App() {
+    let [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="App">
-      
-      <button className='btn-open' onClick={() => setIsOpen(true)}>Open</button>
+    <>
+      <div className="fixed inset-0 flex items-center justify-center">
+      <button className='btn-close' onClick={() => setIsOpen(true)}>Open</button>
       <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
         <div className='background'>
           <Dialog.Panel className="popup">
@@ -19,8 +19,8 @@ function App() {
           </Dialog.Panel>
         </div>
       </Dialog>
-    </div>
+      </div>
+    </>
   )
 }
 
-export default App
